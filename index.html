@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LyricMe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">🎵 LyricMe</div>
+            <nav class="search-nav">
+                <input id="searchInput" type="text" placeholder="Search song, artist, or album..." autocomplete="off">
+                <div class="search-modes">
+                    <label><input type="radio" name="searchMode" value="track" checked>Song</label>
+                    <label><input type="radio" name="searchMode" value="artist">Artist</label>
+                    <label><input type="radio" name="searchMode" value="album">Album</label>
+                </div>
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div id="suggestions" class="suggestions">
+                </div>
+            </nav>
+            <div class="profile-btn" id="profileBtn"></div>
+            <div class="toggle-mode" id="toggleMode" title="Toggle dark mode"><i class="fa-solid fa-moon"></i></div>
+        </header>
+        <section class="lyric-of-day" id="lyricOfDay"></section>
+        <main>
+            <aside class="sidebar">
+                <h3>Favorites <span id="favCount"></span></h3>
+                <div id="favorites" class="favorites"></div>
+                <h4>Mood Cloud</h4>
+                <div id="moodCloud" class="mood-cloud"></div>
+            </aside>
+            <section class="content">
+                <div id="resultSection" class="results"></div>
+                <div id="detailsSection" class="details hidden"></div>
+            </section>
+        </main>
+    </div>
+    <div class="modal-bg hidden" id="modalBg">
+        <div class="modal" id="modal"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
