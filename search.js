@@ -48,7 +48,7 @@ if (!d) {
           <button class="copy" onclick="copyLyrics()">Copy</button>
           <button class="favorite" onclick="toggleFavorite()">${isFav ? "Remove Favorite" : "Add to Favorites"}</button>
           <button class="tag-mood" onclick="openMoodTagModal()">Tag Mood</button>
-          <button class="comment" onclick="openCommentModal()">💬 Comment</button>
+          <button class="comment" onclick="openCommentModal()"> Comment</button>
         </div>
         <div class="moods-list" id="moodsList">${moods.map(m => `<span class="mood-tag">${m}</span>`).join("")}</div>
         <div class="comments-list" id="commentsList">
@@ -69,7 +69,7 @@ function renderFavorites() {
     <div class="fav-item">
       <img class="fav-thumb" src="${f.cover}" alt="album">
       <div class="fav-title" style="cursor:pointer;color:var(--primary);" onclick="showFavoriteDetails('${f.key}')">${f.title}</div>
-      <button class="fav-remove" onclick="removeFavorite('${f.key}')">🗑️</button>
+      <button class="fav-remove" onclick="removeFavorite('${f.key}')"></button>
     </div>
   `).join('');
 }
@@ -111,7 +111,7 @@ window.showFavoriteDetails = function (key) {
       <button class="copy" onclick="copyLyrics()">Copy</button>
       <button class="favorite" onclick="toggleFavorite()">Remove Favorite</button>
       <button class="tag-mood" onclick="openMoodTagModal()">Tag Mood</button>
-      <button class="comment" onclick="openCommentModal()">💬 Comment</button>
+      <button class="comment" onclick="openCommentModal()"> Comment</button>
     </div>
     <div class="moods-list" id="moodsList">${moods.map(m => `<span class="mood-tag">${m}</span>`).join("")}</div>
     <div class="comments-list" id="commentsList">
